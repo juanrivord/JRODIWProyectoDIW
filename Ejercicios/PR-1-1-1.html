@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        } 
+        
+        body{
+            margin:5px;
+            font-family: sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        :root{
+            --primario-rojo:#FF0000;
+            --primario-verde:#00FF00;
+            --primario-azul:#0000FF;
+            --secundario-amarillo:#FFFF00;
+            --secundario-rosa:#FF00FF;
+            --secundario-azulclaro:#00FFFF;
+        }
+
+        table{
+            table-layout: fixed;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        td{
+            padding:15px
+        }
+
+        table:nth-of-type(1){
+            & td:nth-child(1){
+                background-color: var(--primario-rojo);
+            }
+
+            & td:nth-child(2){
+                background-color: var(--primario-verde);
+            }
+
+            & td:nth-child(3){
+                background-color: var(--primario-azul);
+            }
+        }
+
+        table:nth-of-type(2){
+            & td:nth-child(1){
+                background-color: var(--secundario-amarillo);
+            }
+
+            & td:nth-child(2){
+                background-color: var(--primario-rojo);
+            }
+
+            & td:nth-child(3){
+                background-color: var(--secundario-rosa);
+            }
+
+            & td:nth-child(4){
+                background-color: var(--primario-azul);
+            }
+
+            & td:nth-child(5){
+                background-color: var(--secundario-azulclaro);
+            }
+
+            & td:nth-child(6){
+                background-color: var(--primario-verde);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <table>
+        <caption>Colores primarios</caption>
+        <tr>
+            <td>#FF0000</td>
+            <td>#00FF00</td>
+            <td>#0000FF</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>Colores secundarios</caption>
+        <tr>
+            <td>#FFFF00</td>
+            <td>#FF0000</td>
+            <td>#FF00FF</td>
+            <td>#0000FF</td>
+            <td>#00FFFF</td>
+            <td>#00FF00</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
