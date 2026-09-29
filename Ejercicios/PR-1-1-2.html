@@ -7,11 +7,11 @@
     <style>
         *{
             box-sizing: border-box;
+            font-family: sans-serif;
         } 
         
         body{
             margin:5px;
-            font-family: sans-serif;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -20,13 +20,67 @@
             --primario-rojo:#FF0000;
             --primario-verde:#00FF00;
             --primario-azul:#0000FF;
+            --complementario-rojo:#00FFFF;
+            --complementario-verde:#FF00FF;
+            --complementario-azul:#FFFF00;
+        }
+
+        div{
+            width: 33%;height: 48px;
+            display: inline-block;
+            text-align: center;
+            border: 1px solid black;
+            font-weight: bold;
+            &:nth-of-type(1){background-color: var(--primario-rojo);}
+            &:nth-of-type(2){background-color: var(--primario-verde);}
+            &:nth-of-type(3){background-color: var(--primario-azul);}
+
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        span{
+            display: inline-block;
+            width: 100%;height: 100%;
+            line-height: 48px;
+        }
+
+        .hide{
+            display: none;
+            transition: opacity 0.3 ease;
+        }
+
+        div:hover{
+            .hide{
+                display:block;
+            }
+
+            .show{
+                display:none;
+            }
+            &:nth-of-type(1){background-color: var(--complementario-rojo);}
+            &:nth-of-type(2){background-color: var(--complementario-verde);}
+            &:nth-of-type(3){background-color: var(--complementario-azul);}
         }
 
 
     </style>
 </head>
 <body>
+    <main>
+        <h2>Colores RGB, al pasar el raton por encima, muestran el color complementario:</h2>
+        <div>
+            <span class="show">Color rojo: #FF0000</span>
+            <span class="hide">Complementario (cyan): #00FFFF</span>
+        </div>
+        <div>
+            <span class="show">Color verde: #00FF00</span>
+            <span class="hide">Complementario (rosa): #FF00FF</span>
+        </div>
+        <div>
+            <span class="show">Color azul: #0000FF</span>
+            <span class="hide">Complementario (amarillo): #FFFF00</span>
+        </div>
+    </main>
 
-    
 </body>
 </html>
