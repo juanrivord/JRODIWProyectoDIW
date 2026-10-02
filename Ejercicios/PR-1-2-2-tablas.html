@@ -20,6 +20,7 @@
             table-layout: fixed;
             border-collapse: collapse;
             text-align: center;
+            margin-bottom: 20px;
             
             & tr td{
                 width: 100%;
@@ -35,8 +36,56 @@
         .table{
             width: 100%;
             & .tr{
-                height:48px;
+                height:40px;
+                font-size: 0;
+
+                 &:first-of-type{ 
+                    border-top: 2px solid green;
+                    } 
+
             }
+
+            & .td{
+                display:inline-block;
+                border: 2px solid green;
+                font-size: 16px;
+                height: 100%;
+                border-right: 0px;
+                border-top:0px; 
+
+                    &:last-child{
+                    border-right: 2px solid green;
+
+                    
+                }
+            }
+
+            & .tr:nth-of-type(1) .td{
+                width: 25%;
+            }
+
+            & .tr:nth-of-type(2) .td{
+                width: 33.33%;
+            }
+
+            & .tr:nth-of-type(3) .td{
+                width: 10%;
+                text-align: center;
+                &:nth-of-type(5){
+                    background-color: blueviolet;
+                    color: white;
+                    align-items: center;
+                }
+            }
+
+            & .tr:nth-of-type(4) .td{
+                width: 20%;
+            }
+
+            & .tr:nth-of-type(5) .td{
+                width: 20%;
+            }
+
         }
 
 
@@ -83,17 +132,17 @@
             <div class="td">1111</div>
         </div>
         <div class="tr">
-            <td>2</td>
-            <td>222222</td>
-            <td>2222222222</td>
+            <div class="td">2</div>
+            <div class="td">222222</div>
+            <div class="td">2222222222</div>
         </div>
         <div class="tr">
             <div class="td">3</div>
             <div class="td">33</div>
             <div class="td">333</div>
             <div class="td">3333</div>
-            <div class="td">33333</div>
-            <div class="td">33333</div>
+            <div class="td" class="central">33333</div>
+            <div class="td" class="central">33333</div>
             <div class="td">3333</div>
             <div class="td">333</div>
             <div class="td">33</div>
