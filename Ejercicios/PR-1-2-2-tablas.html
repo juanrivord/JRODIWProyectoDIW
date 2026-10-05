@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,6 +35,7 @@
 
         .table{
             width: 100%;
+
             & .tr{
                 height:40px;
                 font-size: 0;
@@ -68,13 +69,18 @@
                 width: 33.33%;
             }
 
-            & .tr:nth-of-type(3) .td{
+            & .tr:nth-of-type(3) .td{   
+                text-align: center;             
                 width: 10%;
-                text-align: center;
+
                 &:nth-of-type(5){
                     background-color: blueviolet;
                     color: white;
-                    align-items: center;
+                }
+
+                &:nth-of-type(5),&:nth-of-type(6){
+                    vertical-align: top;
+                    line-height: 40px;
                 }
             }
 
@@ -141,8 +147,8 @@
             <div class="td">33</div>
             <div class="td">333</div>
             <div class="td">3333</div>
-            <div class="td" class="central">33333</div>
-            <div class="td" class="central">33333</div>
+            <div class="td central">33333</div>
+            <div class="td central">33333</div>
             <div class="td">3333</div>
             <div class="td">333</div>
             <div class="td">33</div>
