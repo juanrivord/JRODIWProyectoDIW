@@ -42,13 +42,22 @@
         }
 
         aside{
+            min-width: 20%;
             background-color: #FF0033;
-            padding:5px;
-        }
+            padding: 5px;
 
-        aside nav{
-            background-color: #CCCCCC;
-        }
+            & div{
+                background-color: #CCCCCC;
+            }
+
+            & nav{
+                background-color: #CCCCCC;
+                & ul{
+                    list-style: none;
+                    padding: 5px;
+                }
+            }
+        }    
 
         main{
             
@@ -65,7 +74,7 @@
         footer{
             background-color: #555555;
             text-align: center;
-            padding: 5px;
+            padding: 1px;
         }
 
     </style>
@@ -90,10 +99,10 @@
                     
                     <nav>
                         <ul>
-                            <li>Inicio</li>
-                            <li>Opciones</li>
-                            <li>Servicios</li>
-                            <li>Contacto</li>
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Opciones</a></li>
+                            <li><a href="#">Servicios</a></li>
+                            <li><a href="#">Contacto</a></li>
                         </ul>
                     </nav>
 
@@ -124,14 +133,14 @@
         </main>
 
                 <aside class="right">
-                    <p>
-                        Aqui tenemos nuestra seleccion de links interesantes.
-                        Elemento: details
-                    </p>
-                    <details>
-                        <summary>Lista datos summary</summary>
-                        <p>Soy unos links y detalles ocultos.</p>
-                    </details>
+                    <div>
+                        <p>Aqui tenemos nuestra seleccion de links interesantes.</p> 
+                        <p>Elemento: details</p>
+                        <details>
+                            <summary>Lista datos summary</summary>
+                            <p>Soy unos links y detalles ocultos.</p>
+                        </details>
+                    </div>
                 </aside>
         </div>
         <footer>
