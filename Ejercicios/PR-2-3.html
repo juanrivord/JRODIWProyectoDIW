@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tablas</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-weight: bold;
+      }
+      .container {
+        width: 95%;
+        margin: 5px;
+        
+        & nav{ 
+            width: 600px;height: 250px;
+            background-color: black;
+            padding: 10px;
+            margin-bottom: 150px;
+
+            & a{
+            display: block;
+            width: 500px;height: 40px;
+            line-height: 40px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: #F5BEC8;
+            margin-bottom: 8px;
+            transition: all 0.5s ease;
+              &:hover{
+                background: #73007D;
+                margin-left: 30px;
+              }
+            }
+        }
+        
+        /*     NAV       */
+        
+        & section{ 
+            width: 600px;height: 60px;
+            background-color: black;
+            padding: 10px;
+              & a{
+              display: inline-block;
+              width: 140px;height: 40px;
+              line-height: 40px;
+              text-align: center;
+              text-decoration: none;
+              border-radius: 20px;
+              color: #5A8867;
+              background-color: #F5BEC8;
+              &:link{background: white;color: #F5BEC8;}
+              &:visited{background: red;}
+              &:hover{font-size: 1.2rem;}
+              &:active{border-radius: 1px;}
+            
+          } /*      SECTION       */
+      }
+
+    }
+
+  
+      
+    </style>
+  </head>
+  <body>
+    <h2>PRACTICA 2-3</h2>
+    <div class="container">
+
+      <nav>
+        <a href="#">1 opcion</a>
+        <a href="#">2 opcion</a>
+        <a href="#">3 opcion</a>
+        <a href="#">4 opcion</a>
+      </nav>
+
+      <section>
+        <a href="https://www.educa.jcyl.es/es">EDUCACYL</a>
+        <a href="https://www.marca.com/">MARCA</a>
+        <a href="https://www.youtube.com/">VIDEOS</a>
+        <a href="https://picsum.photos/">IMAGENES</a>
+      </section>
+
+    </div>
+
+  </body>
+</html>
