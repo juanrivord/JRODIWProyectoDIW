@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body{
+            margin: 5px;
+        }
+
+        form{
+            background-color: #fcf7bb;
+        }
+
+        .container{
+            width: 90%;
+            min-width: 588px;
+        }
+
+        fieldset:nth-of-type(1){
+            label, input{
+                display: inline-block;
+                width: 200px;
+                height: 40px;
+                border-radius: 4px;
+                border: none;
+            }
+            input:nth-of-type(1){ width: 350px;
+            border: 1px solid #000}
+            input:nth-of-type(2){ width: 400px;
+            background-color:pink;}
+            input:nth-of-type(3){ width: 450px;
+            border: 1px solid #000;
+            background-color: aquamarine;}
+            input:nth-of-type(4){ width: 200px;
+            background-color:pink;}
+        }
+
+        fieldset:nth-of-type(2){
+            table{
+                width: 100%;
+                table-layout: fixed;
+                td{
+                    width:50%;
+                    height:48px;
+                    background-color: #cec2f9;
+                    padding-left: 15px;
+                }
+            }
+        }
+
+        fieldset:nth-of-type(3){
+            padding-bottom: 30px;
+            span:nth-of-type(n){
+                display: inline-block;
+                margin-top: 20px;
+            }
+        }
+
+        input[type="submit"]{
+            display: block;
+            background-color: red;
+            margin:auto;
+            width: max-content;
+            height: 48px;
+            border-radius: 6px;
+        }
+
+        input{
+            &:invalid{
+            background-color: pink;
+            }
+        }
+
+        :focus{
+            border: 5px solid blue;
+        }
+
+        :required{
+            background-color: red;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <fieldset>
+                <legend>:Pseudo-clases en formularios</legend>
+                <label for="nom">:autofocus</label>
+                <input type="text" id="nom" placeholder="Nombre"></input>
+                <br/>
+                <label for="apel">:required </label>
+                <input type="text" id="apel" placeholder="Apellidos" required>
+                <br/>
+                <label for="email"> :valid/:invalid</label>
+                <input type="email" id="email" placeholder="correo@mail.com">
+                <br/>
+                <label for="pwd">Password (8 min): </label>
+                <input type="password" id="pwd" minlength="8">
+            </fieldset>
+            <fieldset>
+                <legend>file, color time</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="file">Archivo a subir</label>
+                            <input type="file" id="file" placeholder="Ningun archivo seleccionado.">
+                        </td>
+                        <td>
+                            <label for="color">Eligue el color</label>
+                            <input type="color" id="color">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="date">Fecha de pedido</label>
+                            <input type="date" id="date">
+                        </td>
+                        <td>
+                            <label for="time"></label>
+                            <input type="time" id="time">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>:checked, :in-range/:out-of-range</legend>
+                <span>Sexo:</span>
+                <input type="radio" name="sexo" id="man">
+                <label for="man">Hombre</label>
+                <input type="radio" name="sexo" id="woman" checked>
+                <label for="woman">Mujer</label>
+                <br/>
+                <span>Adiciones:</span>
+                <input type="checkbox" name="hobbies" id="music">
+                <label for="music"> Musica</label>
+                <input type="checkbox" name="hobbies" id="sport">
+                <label for="sport"> Deportes</label>
+                <input type="checkbox" name="hobbies" id="reading">
+                <label for="reading"> Lectura</label>
+                <input type="checkbox" name="hobbies" id="cooking">
+                <label for="cooking"> Musica</label>
+                <br/><br/>
+                <label for="age">Edad(1-120):</label>
+                <input type="number" id="age" min="1" max="120" placeholder="1">
+
+                <label for="search"> Buscar</label>
+                <input type="search" id="search">
+                <span>&#x1F50D;</span>
+
+            </fieldset>
+            
+            <input type="submit" value="Enviar datos">
+        </form>
+
+
+
+
+        <form action="">
+            <p>Lenguajes de programación: </p>
+            <input type="text" name="" id="" list="prog">
+            <datalist id="prog">
+                <option value="C++"></option>
+                <option value="Java"></option>
+                <option value="PHP"></option>
+                <option value="C#"></option>
+                <option value="JavaScript"></option>
+            </datalist>
+
+            <br>
+
+            <p>HORA:</p>
+            <input type="time" name="" id="" list="horas">
+            <datalist id="horas">
+                <option value="10:00"></option>
+                <option value="12:00"></option>
+                <option value="14:00"></option>
+                <option value="16:00"></option>
+            </datalist>
+
+            <br>
+
+            <p>IMAGEN</p>
+            <input type="file" id="img" placeholder="Ningun archivo seleccionado." accept="image/*">
+            <input type="file" id="vid" placeholder="Ningun archivo seleccionado." accept="video/*" capture="environment">
+
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+</html>
