@@ -15,50 +15,121 @@
             margin: 10px;
         }
 
-        main{
+        .contenedor1{
             position: relative;
+
+                    a{
+                    display: inline-block;
+                    text-align: center;
+                    height: 40px;width: 112px;
+                    line-height: 40px;
+                    border-radius: 6px 6px 0px 0px;
+                    text-decoration: none;
+                    font-family: serif;
+                    margin-left:24px;
+
+                    &:nth-of-type(1){background: #67E767;}
+                    &:nth-of-type(2){background: #5178E4;}
+                    &:nth-of-type(3){background: #EBB7D9;}
+
+                    
+                }
+                
+                article{
+                    position:absolute;
+                    height: 300px;width: 450px;
+
+                    &:nth-of-type(1){background: #67E767;z-index: 1;}
+                    &:nth-of-type(2){background: #5178E4;z-index: 1;}
+                    &:nth-of-type(3){background: #EBB7D9;z-index: 1;}
+
+                }
+
+                article:target{z-index: 100;}
         }
 
-        a{
-            display: inline-block;
-            text-align: center;
-            height: 40px;width: 112px;
-            line-height: 40px;
-            border-radius: 6px 6px 0px 0px;
-            text-decoration: none;
-            font-family: serif;
-            margin-left:24px;
+        .contenedor2{
+            position:relative;
+            left:500px;
+                input{display:none;}
 
-            &:nth-of-type(1){background: #67E767;}
-            &:nth-of-type(2){background: #5178E4;}
-            &:nth-of-type(3){background: #EBB7D9;}
+                label{
+                    display:inline-block;
+                    text-align: center;
+                    height: 40px;width: 112px;
+                    font-family: serif;
+                    font-weight: bold;
+                    margin-left:24px;
+                    line-height: 40px;
+                    border-radius: 6px 6px 0px 0px;
+                    background: #6C78BB;
+                    color: white;
+                    cursor:pointer;
+                    
+                }
 
-            
+                article{
+                    position:absolute;
+                    height: 400px;width: 725px;
+                    background: cornsilk;
+                    font-weight: bold;
+                    padding:25px;
+
+                    &:nth-of-type(1){
+                        z-index: 10;
+                    }
+                }
+
+                input:checked + label{
+                    background: #87CEFA;
+
+                    + article{
+                        z-index: 100;
+                    }
+                }
+
+                
         }
+
         
-        article{
-            position:absolute;
-            height: 300px;width: 450px;
-
-            &:nth-of-type(1){background: #67E767;z-index: 1;}
-            &:nth-of-type(2){background: #5178E4;z-index: 1;}
-            &:nth-of-type(3){background: #EBB7D9;z-index: 1;}
-
-        }
-
-        article:target{z-index: 100;}
        
     </style>
 </head>
  
 <body>
     <main>
-        <a href="#p1">Primera</a>
-        <a href="#p2">Segunda</a>
-        <a href="#p3">Tercera</a>
-        <article id="p1">Contenido de la 1 PESTAÑA</article>
-        <article id="p2">Contenido de la 2 PESTAÑA</article>
-        <article id="p3">Contenido de la 3 PESTAÑA</article>
+        <div class="contenedor1">
+            <a href="#p1">Primera</a>
+            <a href="#p2">Segunda</a>
+            <a href="#p3">Tercera</a>
+            <article id="p1">Contenido de la 1 PESTAÑA</article>
+            <article id="p2">Contenido de la 2 PESTAÑA</article>
+            <article id="p3">Contenido de la 3 PESTAÑA</article>
+        </div>
+        <div class="contenedor2">
+
+            <input type="radio" id="rd1" name="rdb" checked>
+            <label for="rd1">Radio 1</label>
+            <article>Este es el contenido del RADIO 1</article>
+
+            <input type="radio" id="rd2" name="rdb">
+            <label for="rd2">Radio 2</label>
+            <article>Este es el contenido del RADIO 2</article>
+
+            <input type="radio" id="rd3" name="rdb">
+            <label for="rd3">Radio 3</label>
+            <article>Este es el contenido del RADIO 3</article>
+
+            <input type="radio" id="rd4" name="rdb">
+            <label for="rd4">Radio 4</label>
+            <article>Este es el contenido del RADIO 4</article>
+
+            <input type="radio" id="rd5" name="rdb">
+            <label for="rd5">Radio 5</label>
+            <article>Este es el contenido del RADIO 5</article>
+
+        </div>
+        
     </main>
 </body>
  
