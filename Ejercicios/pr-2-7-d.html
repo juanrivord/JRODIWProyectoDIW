@@ -1,122 +1,167 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 2-7-3</title>
     <style>
-      * {
-        box-sizing: border-box;font-family: serif;
-        font-weight: 600;
-      }
-
-      .container {
-        width: 100%;
-        height: 100vh;
-        background-color: #34495e;
-      }
-
-      header {
-        position: relative;
-        width: 100%;
-        padding:10px;
-        background: #000;
-        
-        input{
-          display:none;
-          &:checked ~ nav{
-            left:0;
-          }
+        * {
+            box-sizing: border-box; font-family: sans-serif;
+            font-weight: 600;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        & .hbger {
-          display: block;
-          background-color: #666666;
-          width: 104px;
-          height: 48px;
-          margin: 0px 0px 0px 0px;
-          padding-top: 10px;
-          border-radius: 3px;
+        body{
+          margin:0;
+        }
 
-          &:hover{
-            cursor: pointer;
-            border: 2px solid white;
-          }
-          
+        img{
+          width: 100vw;
+        }
 
-          & span {
-            display: block;
-            width: 44px;
-            height: 5px;
-            background: white;
-            margin-left: 5px;
-            box-shadow:
-              0px 11px 0px white,
-              0px 22px 0px white;
-          } /* SPAN */
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background: #34495e;
+            overflow: hidden;
+        }
 
-          strong{
-            display: inline-block;
+        header {
             position: relative;
-            left: 60px;
-          }
+            width: 100%;
+            height: 72px;
+            background:#232f3e;
+           
+            input{
+                display: none;
+                &:checked ~ nav{
+                    left: 0;
+                }
+            }
+            & .lblHbger {
+                position: relative;
+                top: 10px;left: 5px;
+                display: block;
+                width: 104px;
+                height: 48px;
+                background:#232f3e;
+                
+                padding-top: 10px;
+                border-radius: 3px;
+                &:hover{border: 2px solid white;}
+                cursor: pointer;
 
-        } /* HBGER */
+                & span {
+                    display: block;
+                    width: 44px;
+                    height: 5px;
+                    background: white;
+                    margin-left: 5px;
+                    box-shadow: 0px 11px 0px white,
+                        0px 22px 0px white;
+                }
+                strong{
+                    display: inline-block;
+                    position: relative;
+                    left: 55px;
+                       
 
-        nav{
-          position: absolute;
-          width: 300px;height: 90vh;
-          background: #FFFFFF;
-          left: -100%;
-          transition: left 0.5s ease-in-out;
+                }
 
-            a{
+            }  /*hbger  */
+
+            nav{
+                position: absolute;
+                top:0 ;
+                width: 320px;
+                height: 100vh;
+                background:#ffffff;
+                overflow-y: auto;
+                left: -100%;
+                transition: left 0.5s cubic-bezier(1, 0, 0, 1) ;
+                a{
+                    display: block;
+                    width: 100%;height: 40px;    
+                    color: #8a8a8a;
+                    text-decoration: none;
+                    padding-left: 10px;
+                    line-height: 40px;
+                    &:hover{background: #eee;}
+                    &:nth-of-type(1){
+                      background: #232f3e;
+                      color:white;
+                    }
+                } 
+                span{
+                    display: block;width: 100%;
+                    padding: 10px;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    border-top: 1px solid #bbb;
+                }  
+            }/* nav */
+
+            .lblClose{
               display: block;
-              width: 100%;height: 48px;
-              text-decoration: none;
-              color:#232F3E;
-              padding-left: 10px;
-              line-height: 40px;
+              position: absolute;
+              top: 0;left:320px;
+              background: #00000079;
+              width: calc(100vw - 320px);
+              height: 100vh;
+            }
 
-              &:hover{background: #EE82EE;}
-
-              &:nth-of-type(1){
-                background: #232F3E;
-                color: white;
-              }
-              
-            } /* A */
-
-        } /* NAV */
-
-      } /* HEADER */
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <header>
+        <header>    
+            <div class="header1">
+                <img src="./images/barraAmazon.png" alt="">
+            </div>        
+            <input type="radio" name="rd" id="openNav">  
+            <input type="radio" name="rd" id="closeNav">         
+            <label for="openNav" class="lblHbger">
+                <span></span>
+                <strong>Todo</strong>
+            </label> 
 
-        <input type="radio" name="rd" id="openNav">
-        <input type="radio" name="rd" id="closeNav">
-        <label for="openNav" class="hbger">
-          <span></span>
-          <strong>Todo</strong>
-        </label>
+            <nav>                
+                <a>&#128100; &nbsp; Hola, identificate</a>
+                <span>Tendencias</span>
+                <a href="#">Los más vendidos</a>
+                <a href="#"> Vender en Amazon</a>
+                <span >Dispositivos y contenido de Amazon</span>
+                <a href="#">Hola, identificate</a>
+                <a href="#">Tendencias</a>
+                <a href="#">Los más vendidos</a>
+                <a href="#"> Vender en Amazon</a>
+                <a href="#">Los más vendidos</a>
+                <a href="#"> Vender en Amazon</a>
+                <a href="#">Los más vendidos</a>
+                <a href="#"> Vender en Amazon</a>
+                 <span >Buscar por departamento</span>
+                <a href="#"> Libros</a>
+                <a href="#"> Cine, TV y Música </a>
+                <a href="#"> Cine, TV y Música </a>
+                <a href="#"> Libros</a>
+                <a href="#"> Cine, TV y Música </a>
+                <a href="#"> Cine, TV y Música </a>
+                <a href="#"> Libros</a>
+                <a href="#"> Cine, TV y Música </a>
+                <a href="#"> Cine, TV y Música </a>
+                <a href="#"> Libros</a>
+                <a href="#"> Cine, TV y Música </a>
+                <a href="#"> Cine, TV y Música </a>
 
-        <nav>
-          <a href="#">Hola, identificate</a>
-          <a href="#">Tendencias</a>
-          <a href="#">Los mas vendidos</a>
-          <a href="#">Ultimas novedades</a>
-          <a href="#">Vender en amazon</a>
-          <a href="#">Contenido de amazon</a>
-          <a href="#">Amazon Prime Video</a>
-          <a href="#">Amazon Music</a>
-          <a href="#">Amazon Photos</a>
-        </nav>
-        <label for="closeNav"></label>
+            </nav>
+            <label for="closeNav" class="lblClose"></label>
 
-      </header>
+        </header>
+
     </div>
-  </body>
+</body>
+
 </html>
