@@ -35,9 +35,17 @@
            
             input{
                 display: none;
+
                 &:checked ~ nav{
                     left: 0;
                 }
+
+                &:checked ~ .lblClose{
+                   /* right: 0; */
+                   /* left:320px; */
+                   opacity: 1;
+                }
+
             }
             & .lblHbger {
                 position: relative;
@@ -46,7 +54,6 @@
                 width: 104px;
                 height: 48px;
                 background:#232f3e;
-                
                 padding-top: 10px;
                 border-radius: 3px;
                 &:hover{border: 2px solid white;}
@@ -79,7 +86,8 @@
                 background:#ffffff;
                 overflow-y: auto;
                 left: -100%;
-                transition: left 0.5s cubic-bezier(1, 0, 0, 1) ;
+                z-index: 1;
+                transition: left 0.2s cubic-bezier(1, 0, 0, 1) ;
                 a{
                     display: block;
                     width: 100%;height: 40px;    
@@ -105,10 +113,22 @@
             .lblClose{
               display: block;
               position: absolute;
-              top: 0;left:320px;
+              top: 0;left: 320px;
               background: #00000079;
               width: calc(100vw - 320px);
               height: 100vh;
+              opacity: 0;
+              transition: all 0.2s ease;
+            }
+
+            #closeNav:checked ~ nav{
+                left:-320px
+            }
+
+            #closeNav:checked ~ .lblClose{
+                /* right:-100%; */
+                /* left:-100%; */
+                opacity: 0;
             }
 
         }
