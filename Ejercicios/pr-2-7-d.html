@@ -25,6 +25,7 @@
             height: 100vh;
             background: #34495e;
             overflow: hidden;
+            background-image: url(./images/fondoAmazon.png);
         }
 
         header {
@@ -47,13 +48,31 @@
                 }
 
             }
+
+            .header1{
+                position: relative;top: 0;
+                width: 100vw;
+                & img{
+                    display: block;
+                    width: 100vw;height: 74px;
+                }
+            }
+
+            .header2{
+                width: 100vw;height: 52px;
+                position: absolute;
+                top: 52px;
+                background-color: #232f3e;
+            }
+
             & .lblHbger {
-                position: relative;
-                top: 10px;left: 5px;
+                position: absolute;
+                top: 52px;left: 0px;
                 display: block;
                 width: 104px;
                 height: 48px;
                 background:#232f3e;
+                color: white;
                 padding-top: 10px;
                 border-radius: 3px;
                 z-index: 2;
@@ -143,6 +162,9 @@
             <div class="header1">
                 <img src="./images/barraAmazon.png" alt="">
             </div>        
+
+            <div class="header2"></div>
+
             <input type="radio" name="rd" id="openNav">  
             <input type="radio" name="rd" id="closeNav">         
             <label for="openNav" class="lblHbger">
