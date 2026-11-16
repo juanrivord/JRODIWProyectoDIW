@@ -120,6 +120,15 @@
                       background: #232f3e;
                       color:white;
                     }
+                    &::after{
+                        position: absolute;
+                        right: 12px;
+                        content: "\003e";
+                    }
+
+                    &:hover::after{
+                        transform: scale(1.5);
+                    }
                 } 
                 span{
                     display: block;width: 100%;
@@ -134,12 +143,28 @@
               display: block;
               position: absolute;
               top: 0;left: 0px;
-              background: #00000079;
+              background: #000000bd;
               width: 100vw;
               height: 100vh;
               opacity: 0;
               z-index: 1;
               transition: all 0.3s ease;
+
+              &::after{
+                position: absolute;
+                left: 325px;top: 5px;
+                width: 32px;height: 32px;
+                padding: 5px;
+                content: "X";
+                color: white;
+                background: transparent;
+                cursor: pointer;
+                border: 1px solid white;
+                border-radius: 5px;
+                font-size: 1.4rem;
+                pointer-events: painted;
+                text-align: center;
+              }
             }
 
             #closeNav:checked ~ nav{
