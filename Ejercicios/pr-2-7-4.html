@@ -48,11 +48,14 @@
         .container::after {
             content: "";
             position: absolute;
-            width: 145px;
-            height: 18px;
-            left: 50%;
-            bottom: -30px;
-
+            width: 250px;
+            height: 30px;
+            left: 45%;
+            bottom: -12px;
+            border-radius: 50%;
+            background: radial-gradient(ellipse at center, blue 40%, rgba(0, 0, 255, 0.6) 70%, transparent 100%);
+            filter: blur(5px);
+            z-index: -1;
         }
     </style>
 </head>
